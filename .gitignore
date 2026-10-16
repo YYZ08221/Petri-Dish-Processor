@@ -1,0 +1,19 @@
+# Publish only application code, documentation, and installation tools.
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/app.py
+!/requirements.txt
+!/*.bat
+!/src/
+!/tests/
+!/scripts/
+!/.github/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.env.*
+tests/reference_images/
