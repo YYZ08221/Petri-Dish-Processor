@@ -1,4 +1,4 @@
-# CBL 培养皿图片批量处理系统
+# 培养皿图片批量处理系统
 
 把实验照片中的培养皿识别出来，逐个检查、旋转，再裁剪成独立图片。适合批量整理涂布照片、制作实验记录和准备后续分析素材。
 
@@ -33,20 +33,20 @@
 
 ### 2. 下载代码
 
-**下载 ZIP：** 在仓库页面点击 **Code → Download ZIP**，解压，将包含 `app.py` 的那一层文件夹命名为 `CBL`。建议位置：
+**下载 ZIP：** 在仓库页面点击 **Code → Download ZIP**，解压，将包含 `app.py` 的那一层文件夹命名为 `Petri-Dish-Processor`。建议位置：
 
 ```text
-D:\程序\涂布处理系统\CBL
+D:\程序\涂布处理系统\Petri-Dish-Processor
 ```
 
 **Git 克隆：** 打开 PowerShell 执行：
 
 ```powershell
-git clone https://github.com/YYZ08221/CBL-Petri-Dish-Processor.git "D:\程序\涂布处理系统\CBL"
-cd "D:\程序\涂布处理系统\CBL"
+git clone https://github.com/YYZ08221/Petri-Dish-Processor.git "D:\程序\涂布处理系统\Petri-Dish-Processor"
+cd "D:\程序\涂布处理系统\Petri-Dish-Processor"
 ```
 
-路径可以自选，没有 D 盘时可用 `C:\Tools\CBL`。程序使用相对路径，不绑定盘符。已有目录非空时，请先备份或另选空目录。
+路径可以自选，没有 D 盘时可用 `C:\Tools\Petri-Dish-Processor`。程序使用相对路径，不绑定盘符。已有目录非空时，请先备份或另选空目录。
 
 ### 3. 一键安装并检查
 
@@ -62,7 +62,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -RunTe
 
 ```text
 PASS: dependencies, offscreen GUI, crop export, and CSV log
-CBL installation verified. Start with: .\.venv\Scripts\python.exe app.py
+Petri-Dish-Processor installation verified. Start with: .\.venv\Scripts\python.exe app.py
 ```
 
 真实照片测试依赖未公开参考图，缺少图片时显示 `skipped` 是预期。基础检查通过不代表任何照片都能准确识别。
@@ -72,7 +72,7 @@ CBL installation verified. Start with: .\.venv\Scripts\python.exe app.py
 双击 **启动程序.bat**，或者运行：
 
 ```powershell
-cd "D:\程序\涂布处理系统\CBL"
+cd "D:\程序\涂布处理系统\Petri-Dish-Processor"
 .\.venv\Scripts\python.exe app.py
 ```
 
@@ -81,7 +81,7 @@ cd "D:\程序\涂布处理系统\CBL"
 ### 手动安装
 
 ```powershell
-cd "D:\程序\涂布处理系统\CBL"
+cd "D:\程序\涂布处理系统\Petri-Dish-Processor"
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
@@ -192,11 +192,11 @@ Agent 需要具备本机终端执行能力，可以下载、安装、验证和�
 将下面的指令发给 Agent：
 
 ```text
-请在本机安装 CBL 培养皿图片批量处理系统。
-仓库：https://github.com/YYZ08221/CBL-Petri-Dish-Processor
+请在本机安装培养皿图片批量处理系统。
+仓库：https://github.com/YYZ08221/Petri-Dish-Processor
 克隆后阅读 README.md 和 AGENTS.md。
 检查 Windows、Git 和 64 位 Python 3.11+。
-优先安装到 D:\程序\涂布处理系统\CBL，没有 D 盘时用 C:\Tools\CBL。
+优先安装到 D:\程序\涂布处理系统\Petri-Dish-Processor，没有 D 盘时用 C:\Tools\Petri-Dish-Processor。
 目录已有文件时保留原文件，另选空目录。
 在项目根目录执行：
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -RunTests
@@ -210,8 +210,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -RunTe
 Agent 命令示例：
 
 ```powershell
-git clone https://github.com/YYZ08221/CBL-Petri-Dish-Processor.git "D:\程序\涂布处理系统\CBL"
-cd "D:\程序\涂布处理系统\CBL"
+git clone https://github.com/YYZ08221/Petri-Dish-Processor.git "D:\程序\涂布处理系统\Petri-Dish-Processor"
+cd "D:\程序\涂布处理系统\Petri-Dish-Processor"
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -RunTests
 .\.venv\Scripts\python.exe app.py
 ```
@@ -263,7 +263,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -RunTe
 ## 测试与开发
 
 ```text
-CBL/
+Petri-Dish-Processor/
   app.py                  桌面入口
   启动程序.bat            双击启动
   requirements.txt        依赖（包含 pytest）
@@ -293,7 +293,7 @@ $env:QT_QPA_PLATFORM = 'offscreen'
 真实照片回归测试默认读取 `tests/reference_images`，也可设置：
 
 ```powershell
-$env:CBL_REFERENCE_DIR = 'C:\Data\CBL-reference-images'
+$env:PETRI_REFERENCE_DIR = 'C:\Data\Petri-Dish-Processor-reference-images'
 .\.venv\Scripts\python.exe -m pytest tests/test_detection_reference_images.py -q
 ```
 

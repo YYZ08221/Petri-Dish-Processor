@@ -28,7 +28,7 @@ def main() -> int:
     window = MainWindow()
     window.close()
     app.processEvents()
-    with TemporaryDirectory(prefix='cbl-check-') as directory:
+    with TemporaryDirectory(prefix='petri-check-') as directory:
         root = Path(directory)
         source = root / 'synthetic.png'
         image = np.full((100, 100, 3), 100, dtype=np.uint8)

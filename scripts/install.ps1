@@ -44,7 +44,7 @@ try {
             $env:QT_QPA_PLATFORM = $previousQtPlatform
         }
     }
-    Write-Output 'CBL installation verified. Start with: .\.venv\Scripts\python.exe app.py'
+    Write-Output 'Petri-Dish-Processor installation verified. Start with: .\.venv\Scripts\python.exe app.py'
 } finally {
     Pop-Location
 }

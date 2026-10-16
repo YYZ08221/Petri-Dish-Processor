@@ -8,7 +8,7 @@ from src.core.detection import detect_dishes
 from src.core.image_io import read_image
 
 
-REFERENCE_DIR = Path(os.environ.get('CBL_REFERENCE_DIR', str(Path(__file__).parent / 'reference_images')))
+REFERENCE_DIR = Path(os.environ.get('PETRI_REFERENCE_DIR', str(Path(__file__).parent / 'reference_images')))
 REFERENCE_IMAGES = [
     REFERENCE_DIR / f'IMG_20260609_{suffix}.jpg'
     for suffix in ('091759', '091818', '091843', '091925', '091844', '091907', '091908', '091924')

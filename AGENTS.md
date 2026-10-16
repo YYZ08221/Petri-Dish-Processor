@@ -1,4 +1,4 @@
-# CBL Agent Installation And Maintenance
+# Petri-Dish-Processor Agent Installation And Maintenance
 
 This repository is a Python/PySide6 Windows desktop application, not an agent
 plugin or a hosted service. Agents can install and verify it using a local shell.
@@ -6,8 +6,8 @@ plugin or a hosted service. Agents can install and verify it using a local shell
 ## Install
 
 1. Use Windows 10/11, Git, and 64-bit Python 3.11 or newer.
-2. Clone `https://github.com/YYZ08221/CBL-Petri-Dish-Processor.git` into the user's
-   chosen directory. Suggested location: `D:\程序\涂布处理系统\CBL`.
+2. Clone `https://github.com/YYZ08221/Petri-Dish-Processor.git` into the user's
+   chosen directory. Suggested location: `D:\程序\涂布处理系统\Petri-Dish-Processor`.
    If that directory already contains files, preserve them and use another directory.
 3. From the repository root run:
 
@@ -16,7 +16,7 @@ plugin or a hosted service. Agents can install and verify it using a local shell
    ```
 
 4. Report the installation path, smoke-check result, pytest summary, and launch
-   command. Reference-image tests may skip unless `CBL_REFERENCE_DIR` is provided.
+   command. Reference-image tests may skip unless `PETRI_REFERENCE_DIR` is provided.
 5. To open the application in the user's interactive desktop:
 
    ```powershell
@@ -36,7 +36,7 @@ $env:QT_QPA_PLATFORM = 'offscreen'
 ```
 
 `scripts/check_install.py` uses synthetic data and temporary output only. For
-real-image regression tests, set `CBL_REFERENCE_DIR` to a directory containing
+real-image regression tests, set `PETRI_REFERENCE_DIR` to a directory containing
 the named reference JPEGs. Skipped real-image tests do not prove detection quality.
 
 Application entry: `app.py`. Detection: `src/core/detection.py`. GUI:
